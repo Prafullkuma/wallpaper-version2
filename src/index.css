@@ -3,7 +3,7 @@
     flex-wrap      : wrap;
     align-items    : stretch;
     justify-content: space-around;
-    flex-direction : column;
+    flex-direction : row;
     max-height     : 100vh;
   }
   
