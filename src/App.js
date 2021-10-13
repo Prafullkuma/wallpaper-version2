@@ -7,7 +7,7 @@ function App() {
   const [data,setData]=useState([])
     
   useLayoutEffect(()=>{
-      axios.get('http://www.mocky.io/v2/5ecb5c353000008f00ddd5a0')
+      axios.get('https://www.mocky.io/v2/5ecb5c353000008f00ddd5a0')
       .then((res)=>{
         const data=res.data
           const result=data.map((ele)=>{
