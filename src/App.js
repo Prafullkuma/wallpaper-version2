@@ -1,6 +1,8 @@
 import React ,{useState,useLayoutEffect} from 'react'
 import GallaryContainer from './Components/GallaryContainer'
 import axios from 'axios'
+import spinner from './assets/1490.gif'
+
 function App() {
   const [data,setData]=useState([])
     
@@ -20,7 +22,15 @@ function App() {
 
   return (  
     <div className="App">
-        <GallaryContainer data={data}/>
+        {data.length ===0 ?
+           <div style={{textAlign:'center',margin:'250px',fontFamily:'sans-serif'}}>
+             <img src={spinner} alt="spinner"/>
+             <h3>...Loading </h3>
+           </div>
+          :
+           <GallaryContainer data={data}/>
+          }
+        
     </div>
   );
 }
